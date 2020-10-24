@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lorem Ipsum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/png" href="images/favicon-small.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="images/favicon-large.png" sizes="32x32">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- load fullpage.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+	<!-- Load d3.js -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors:['subMenu','firstPlace', 'secondPlace', 'thirdPlace'],
+				//yellow #fdcd2d blue #4182fa red #fd1d1d
+				sectionsColor : ['grey','#fdcd2d', '#4182fa', '#fd1d1d'],
+				verticalCentered: true,
+				easingcss3: 'cubic-bezier(.58,.06,.46,.93)',
+				slidesNavigation: true,
+				lockAnchors:false,
+				/*
+				'afterLoad': function(origin, destination, direction){
+					var loadedSection = this;
+					if(origin.anchor == 'subMenu'){
+					 $('.top').addClass('menu-invert');
+					 $('.middle').addClass('menu-invert');
+					 $('.bottom').addClass('menu-invert');
+				 }
+				},
+				'onLeave': function(origin, destination, direction){
+					var loadedSection = this;
+				 if(destination.anchor == 'subMenu'){
+					 $('.top').addClass('menu-invert');
+					 $('.middle').addClass('menu-invert');
+					 $('.bottom').addClass('menu-invert');
+				 }
+				 else {
+					 $('.top').removeClass('menu-invert');
+					 $('.middle').removeClass('menu-invert');
+					 $('.bottom').removeClass('menu-invert');
+				 }
+			 }
+			 */
+			});
+			
+            });
+	</script>
+</head>
+<body>
+	<header class="header">
+		<div class="hamburger">
+			<div class="top menu-invert"></div>
+			<div class="middle menu-invert"></div>
+			<div class="bottom menu-invert"></div>
+		</div>
+
+		<nav class="menu">
+			<div class="menu-logo">
+				<a href="#">
+					<div class="logo">
+						<h3 class="invert-color">What is our story title?</h3>
+					</div>
+				</a>
+			</div>
+
+			<ul class="menu-list">
+				<li class="menu-item"><a href="#firstPlace" data-hover="First Place">First Place</a></li>
+				<li class="menu-item"><span></span></li>
+				<li class="menu-item"><a href="#secondPlace" data-hover="Second Place">Second Place</a></li>
+				<li class="menu-item"><span></span></li>
+				<li class="menu-item"><a href="#thirdPlace" data-hover="Third Place">Third Place</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="fullpage">
+		<div class="section">
+			<div class="nav-cta-text">
+			<h1>Some Verb</h1>
+			<p>lead user to click on the navigation buttons below</p>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-4 p-0">
+					<div class="nav-zone nav-background" id="nav-first-bg">
+						<div class="nav-first">
+						<a href="#firstPlace" class="round-button first-bg"><i class="fa fa-home"></i></a>
+						<h6>First Place</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 p-0">
+					<div class="nav-zone nav-background" id="nav-second-bg">
+						<div class="nav-first">
+						<a href="#secondPlace" class="round-button second-bg"><i class="fa fa-briefcase"></i></a>
+						<h6>Second Place</h6>
+					</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 p-0">
+					<div class="nav-zone nav-background" id="nav-third-bg">
+						<div class="nav-first">
+						<a href="#thirdPlace" class="round-button third-bg"><i class="fa fa-plane"></i></a>
+						<h6>Third Place</h6>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section firstPlace" >
+			<div class="gradient-home"></div>
+			<div class="chap-cover">
+			<h1 class="text-center">Home</h1>
+			<div class="line-break"></div>
+			</div>
+			<img class="home-img1" data-src="images/side-table.png">
+			<img class="home-img2" data-src="images/lamp.png">
+			<img class="home-img3" data-src="images/sofa.png">
+		</div>
+		<div class="section secondPlace" >
+			<div class="gradient-work"></div>
+			<div class="chap-cover">
+			<h1 class="text-center">Workplace</h1>
+			<div class="line-break"></div>
+			</div>
+		</div>
+		<div class="section thirdPlace" >
+			<div class="gradient-public"></div>
+			<div class="chap-cover">
+			<h1 class="text-center">Public</h1>
+			<div class="line-break"></div>
+			</div>
+			<img class="public-img1" data-src="images/airplane.png">
+			<img class="public-img2" data-src="images/skyline.png">
+		</div>
+	</div>
+
+	<script src="js/menu.js"></script>
+	<script src="js/subMenu-bg.js"></script>
+</body>
+</html>
