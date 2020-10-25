@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Capa_1"
+   enable-background="new 0 0 512 512"
+   height="512"
+   viewBox="0 0 512 512"
+   width="512"
+   version="1.1"
+   sodipodi:docname="briefcase.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)">
+  <metadata
+     id="metadata840">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs838" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="764"
+     id="namedview836"
+     showgrid="false"
+     inkscape:zoom="1.171875"
+     inkscape:cx="290.98667"
+     inkscape:cy="268.8"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Capa_1" />
+  <path
+     d="m456.834 96.399h-57.3v-41.233c0-30.418-24.748-55.166-55.167-55.166h-176.733c-30.419 0-55.167 24.748-55.167 55.166v41.233h-57.3c-30.419 0-55.167 24.748-55.167 55.167v136.566c0 8.284 6.716 15 15 15h1.067v153.7c0 30.419 24.747 55.167 55.166 55.167h369.533c30.419 0 55.167-24.748 55.167-55.167v-153.7h1.067c8.284 0 15-6.716 15-15v-136.566c0-30.419-24.748-55.167-55.166-55.167zm-314.367-41.233c0-13.876 11.29-25.166 25.167-25.166h176.733c13.877 0 25.167 11.29 25.167 25.166v41.233h-227.067zm-112.467 96.4c0-13.877 11.29-25.167 25.167-25.167h401.667c13.876 0 25.166 11.29 25.166 25.167v121.566h-178.866v-33.2c0-8.284-6.716-15-15-15h-64.267c-8.284 0-15 6.716-15 15v33.2h-178.867zm208.867 136.663c0-.033.005-.064.005-.097s-.005-.064-.005-.097v-33.104h34.267v66.4h-34.267zm227.067 168.604c0 13.877-11.29 25.167-25.167 25.167h-369.534c-13.876 0-25.166-11.29-25.166-25.167v-153.7h162.8v33.2c0 8.284 6.716 15 15 15h64.267c8.284 0 15-6.716 15-15v-33.2h162.8z"
+     id="path833"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:15.11811024;stroke-miterlimit:4;stroke-dasharray:none;stroke:#ffffff;stroke-opacity:1;stroke-linejoin:round" />
+</svg>
