@@ -17,7 +17,7 @@ most pages are done, 2 inner pages for 2nd place yet to complete
 
 3.page cover for reponsive window: thinking add one button to the page to resize window https://stackoverflow.com/questions/7022787/can-i-resize-the-browser-window
 
-4.browser compability test: already found - video not showing on safari
+4.browser compability test: chrome pass, safari pass
 
 5.shall we get heng swee keat speech footage for that particular quoted message? current video is a random trimed clip
 
