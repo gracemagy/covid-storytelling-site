@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Lorem Ipsum</title>
+	<title>Singapore x Covid-19</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="icon" type="image/png" href="images/favicon-small.png" sizes="16x16">
 	<link rel="icon" type="image/png" href="images/favicon-large.png" sizes="32x32">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pace/0.7.8/pace.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="pace.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- load fullpage.js -->
@@ -19,139 +20,370 @@
 	<script>
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors:['subMenu','firstPlace', 'secondPlace', 'thirdPlace'],
+				anchors:['homePage','threePlaces','subMenu','firstPlace','firstPlace1','firstPlace2','secondPlace','secondPlace1','thirdPlace','thirdPlace1','thirdPlace2','thirdPlace3','theNext','theFooter'],
 				//yellow #fdcd2d blue #4182fa red #fd1d1d
-				sectionsColor : ['grey','#fdcd2d', '#4182fa', '#fd1d1d'],
+				sectionsColor : ['#222','#222','#222','#fdcd2d','#fff','#fdcd2d','#4182fa','#fff','#fd1d1d','#fff','#fff','#fff','#fff','#fff'],
 				verticalCentered: true,
 				easingcss3: 'cubic-bezier(.58,.06,.46,.93)',
 				slidesNavigation: true,
 				lockAnchors:false,
-				/*
 				'afterLoad': function(origin, destination, direction){
 					var loadedSection = this;
-					if(origin.anchor == 'subMenu'){
-					 $('.top').addClass('menu-invert');
-					 $('.middle').addClass('menu-invert');
-					 $('.bottom').addClass('menu-invert');
-				 }
+					if(destination.anchor == 'homePage' || destination.anchor == 'threePlaces' || destination.anchor == 'subMenu' || destination.anchor == 'secondPlace' || destination.anchor == 'thirdPlace'){
+						$('.top').removeClass('bg-dark');
+						$('.middle').removeClass('bg-dark');
+						$('.bottom').removeClass('bg-dark');
+					}
 				},
 				'onLeave': function(origin, destination, direction){
 					var loadedSection = this;
-				 if(destination.anchor == 'subMenu'){
-					 $('.top').addClass('menu-invert');
-					 $('.middle').addClass('menu-invert');
-					 $('.bottom').addClass('menu-invert');
-				 }
-				 else {
-					 $('.top').removeClass('menu-invert');
-					 $('.middle').removeClass('menu-invert');
-					 $('.bottom').removeClass('menu-invert');
-				 }
-			 }
-			 */
+					if(destination.anchor == 'homePage' || destination.anchor == 'threePlaces' || destination.anchor == 'subMenu' || destination.anchor == 'secondPlace'){
+						$('.top').removeClass('bg-dark');
+						$('.middle').removeClass('bg-dark');
+						$('.bottom').removeClass('bg-dark');
+					}
+					else {
+						$('.top').addClass('bg-dark');
+						$('.middle').addClass('bg-dark');
+						$('.bottom').addClass('bg-dark');
+					}
+				}
 			});
-			
-            });
+		});
 	</script>
 </head>
 <body>
 	<header class="header">
 		<div class="hamburger">
-			<div class="top menu-invert"></div>
-			<div class="middle menu-invert"></div>
-			<div class="bottom menu-invert"></div>
+			<div class="top bg-dark"></div>
+			<div class="middle bg-dark"></div>
+			<div class="bottom bg-dark"></div>
 		</div>
 
 		<nav class="menu">
 			<div class="menu-logo">
-				<a href="#">
+				<a href="#homePage">
 					<div class="logo">
-						<h3 class="invert-color">What is our story title?</h3>
+						<h3 class="invert-color">Singapore x Covid-19</h3>
 					</div>
 				</a>
 			</div>
 
 			<ul class="menu-list">
-				<li class="menu-item"><a href="#firstPlace" data-hover="First Place">First Place</a></li>
+				<li class="menu-item"><a href="#threePlaces" data-hover="Three Places">Three Places</a></li>
 				<li class="menu-item"><span></span></li>
-				<li class="menu-item"><a href="#secondPlace" data-hover="Second Place">Second Place</a></li>
+				<li class="menu-item"><a href="#firstPlace" data-hover="Home">Home</a></li>
 				<li class="menu-item"><span></span></li>
-				<li class="menu-item"><a href="#thirdPlace" data-hover="Third Place">Third Place</a></li>
+				<li class="menu-item"><a href="#secondPlace" data-hover="Work">Work</a></li>
+				<li class="menu-item"><span></span></li>
+				<li class="menu-item"><a href="#thirdPlace" data-hover="Leisure">Leisure</a></li>
+				<li class="menu-item"><span></span></li>
+				<li class="menu-item"><a href="#theNext" data-hover="The Next">The Next</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<div id="fullpage">
 		<div class="section">
-			<div class="nav-cta-text">
-			<h1>Some Verb</h1>
-			<p>lead user to click on the navigation buttons below</p>
+			<video id="cover-video" loop muted data-autoplay>
+				<source src="images/sg-at-still.mov" type="video/mp4">
+				</video>
+				<div class="chap-cover">
+					<h1 class="text-center white-text">Singapore <br><span class="animated-text">x</span> Covid-19</h1>
+					<p class="white-text">A Visual Exploration of the COVID-19 Pandemic Impact on Singapore</p>
+				</div>
+				<div class='scroll-animate'></div>
 			</div>
-			<div class="row">
-				<div class="col-12 col-lg-4 p-0">
-					<div class="nav-zone nav-background" id="nav-first-bg">
-						<div class="nav-first">
-							<!--
-						<a href="#firstPlace" class="round-button first-bg"><i class="fa fa-home"></i></a>
-					-->
-					<a href="#firstPlace" class="round-button first-bg"><img src="images/home.svg"></a>
-						<h6>First Place</h6>
+			<div class="section threePlaces">
+				<div class="chap-cover-right">
+					<h2 class="white-text">The Three Places</h2>
+					<p class="white-text">Ray Roldenburg in 2000 wrote about the concept of the <i>Three Places</i> in his book, <i>Celebrating The Third Place</i>.</p>
+				</div>
+				<div class="curve-edge-type1-1">
+					<img src="images/ray-roldenburg.jpg">
+				</div>	
+				<div class="curve-edge-type1-2 bg-animate">
+					<p class="blinking">SOS SOS SOS</p>
+					<p class="white-text">It involves blah blah blah.. // Talk about the significance of the Three Places => perhaps link it to mental health etc.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="nav-cta-text">
+					<h2 class="white-text">Trace</h2>
+					<p class="white-text"> the effects of COVID in each of the three places in Singapore</p>
+				</div>
+				<div class="nav-zone-1 nav-background-1" id="nav-first-bg">
+					<div class="nav-first">
+						<a href="#firstPlace" class="round-button"><img class="nav-first-img" src="images/home-color.svg"></a>
+						<h6 class="white-text">First Place</h6>
+					</div>
+				</div>
+				<div class="nav-zone-2 nav-background-2" id="nav-second-bg">
+					<div class="nav-second">
+						<a href="#secondPlace" class="round-button"><img class="nav-second-img" src="images/briefcase-color.svg"></a>
+						<h6 class="white-text">Second Place</h6>
+					</div>
+				</div>
+				<div class="nav-zone-3 nav-background-3" id="nav-third-bg">
+					<div class="nav-third">
+						<a href="#thirdPlace" class="round-button"><img class="nav-third-img" src="images/airplane-color.svg"></a>
+						<h6 class="white-text">Third Place</h6>
+					</div>
+				</div>
+			</div>
+			<div class="section firstPlace" >
+				<div class="gradient-home"></div>
+				<div class="chap-cover">
+					<h1 class="text-center white-text">Home</h1>
+					<div class="line-break"></div>
+					<h6 class="text-center white-text">First Place</h6>
+				</div>
+				<img class="home-img1" data-src="images/lamp.png">
+				<img class="home-img2" data-src="images/sofa.png">
+				<img class="home-img3" data-src="images/side-table.png">
+			</div>
+			<div class="section firstPlace1">
+				<div class="chap-cover-right">
+					<h2>Circuit breaker, heartbreaker?</h2>
+					<p>Stripping residents of their personal freedoms had resulted in increased mental stress in homes.</p>
+				</div>
+				<div class="curve-edge-type2 bg-home">
+				</div>
+				<div class="curve-edge-type2-home">
+					<p>The 'Circuit Breaker' (CB) measures had been announced by the Singapore government on April 3 2020 in response to the growing number of new cases. The first phase <b>required residents to stay at home</b> to curb the pandemic.</p>
+				</div>
+			</div>
+			<div class="section firstPlace2">
+				<div class="curve-edge-grid-2">
+					<div class="curve-edge-type3-left">
+						<h2>Don't Have,<br> Complain</h2>
+						<div class="row p-5 my-4 mx-3">
+							<div class="col p-0">
+								<img src="images/figure.svg" style="opacity: 0.2;">
+							</div>
+							<div class="col p-0">
+								<img src="images/figure.svg">
+							</div>
+							<div class="col p-0">
+								<img src="images/figure.svg">
+							</div>
+							<div class="col p-0">
+								<img src="images/figure.svg">
+							</div>
+							<div class="col p-0">
+								<img src="images/figure.svg">
+							</div>
+						</div>
+						<p><b>4 out of 5</b> don’t want to go through CB alone. Those fortunate with isolation members however, do not have it good as well.</p>
+					</div>
+				</div>
+				<div class="curve-edge-grid-2">
+					<div class="curve-edge-type3-right">
+						<h2>Have,<br> Also Complain</h2>
+						<div class="row mt-3">
+							<div class="col-8">
+								<a class="headline" href="https://www.youtube.com/watch?v=5yYkkLrXbqo" target="_blank">
+									<div class="row">
+										<div class="col-2 pr-0">
+											<img src="images/st-logo.jpg">
+										</div>
+										<div class="col-10">
+											<p class="white-text">Six months on, Covid-19 fatigue hits home</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-8 offset-4">
+								<a class="headline" href="https://www.straitstimes.com/singapore/health/driven-to-breaking-point-by-stress-during-pandemic" target="_blank">
+									<div class="row">
+										<div class="col-2 pr-0">
+											<img src="images/st-logo.jpg">
+										</div>
+										<div class="col-10">
+											<p class="white-text">Some driven to breaking point by stress during Covid-19 pandemic</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-8">
+								<a class="headline" href="https://www.channelnewsasia.com/news/singapore/covid-19-coronavirus-vulnerable-groups-msf-12613724" target="_blank">
+									<div class="row">
+										<div class="col-2 pr-0">
+											<img src="images/cna-logo.jpg">
+										</div>
+										<div class="col-10">
+											<p class="white-text">MSF outlines stepped-up assistance to vulnerable groups affected by COVID-19 outbreak</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-8 offset-4">
+								<a class="headline" href="https://www.todayonline.com/big-read/big-read-short-need-boundaries-when-working-home" target="_blank">
+									<div class="row">
+										<div class="col-2 pr-0">
+											<img src="images/today-logo.jpg">
+										</div>
+										<div class="col-10">
+											<p class="white-text">The Big Read in short: The need for boundaries when working from home</p>
+										</div>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-4 p-0">
-					<div class="nav-zone nav-background" id="nav-second-bg">
-						<div class="nav-first">
-							<!--
-						<a href="#secondPlace" class="round-button second-bg"><i class="fa fa-briefcase"></i></a>
-					-->
-					<a href="#secondPlace" class="round-button second-bg"><img src="images/briefcase.svg"></a>
-						<h6>Second Place</h6>
-					</div>
+			</div>
+			<div class="section secondPlace" >
+				<div class="gradient-work"></div>
+				<div class="chap-cover">
+					<h1 class="text-center white-text">Work</h1>
+					<div class="line-break"></div>
+					<h6 class="text-center white-text">Second Place</h6>
+				</div>
+				<img class="work-img1" data-src="images/cbd.png">
+			</div>
+			<div class="section secondPlace1">
+				<div class="curve-edge-type4-left">
+					<div class="row">
+						<div class="col-4">
+							<img class="quotation" src="images/quote.svg">
+							<h6>Fortitude Budget 2020</h6>
+						</div>
+						<div class="col-8">
+							<h3><i>We have the fortitude, to improvise adapt and overcome the uncertainties. We have the resilience, to weather the difficulties, and we will stand in solidarity as one united Singapore – to beat this crisis and emerge stronger as a nation.</i></h3>
+							<p>Heng Swee Keat, Deputy Prime Minister</p>
+							<audio id="hsk-speech-audio" src="images/hsk-speech.mpeg" preload="auto"></audio>
+							<a onClick="togglePlay()" class="round-button second-bg float-left mt-3"><img id="audio-button" src="images/speaker.svg"></a>
+						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-4 p-0">
-					<div class="nav-zone nav-background" id="nav-third-bg">
-						<div class="nav-first">
-							<!--
-						<a href="#thirdPlace" class="round-button third-bg"><i class="fa fa-plane"></i></a>
-					-->
-					<a href="#thirdPlace" class="round-button third-bg"><img src="images/airplane.svg"></a>
-						<h6>Third Place</h6>
-					</div>
-					</div>
+				<div class="curve-edge-type4-right second-bg">
+					<video id="cover-video" loop muted data-autoplay>
+						<source src="images/hskspeech.mp4" type="video/mp4">
+						</video>
+					</div>	
 				</div>
-			</div>
-		</div>
-		<div class="section firstPlace" >
-			<div class="gradient-home"></div>
-			<div class="chap-cover">
-			<h1 class="text-center">Home</h1>
-			<div class="line-break"></div>
-			</div>
-			<img class="home-img1" data-src="images/side-table.png">
-			<img class="home-img2" data-src="images/lamp.png">
-			<img class="home-img3" data-src="images/sofa.png">
-		</div>
-		<div class="section secondPlace" >
-			<div class="gradient-work"></div>
-			<div class="chap-cover">
-			<h1 class="text-center">Workplace</h1>
-			<div class="line-break"></div>
-			</div>
-		</div>
-		<div class="section thirdPlace" >
-			<div class="gradient-public"></div>
-			<div class="chap-cover">
-			<h1 class="text-center">Public</h1>
-			<div class="line-break"></div>
-			</div>
-			<img class="public-img1" data-src="images/airplane.png">
-			<img class="public-img2" data-src="images/skyline.png">
-		</div>
-	</div>
+				<div class="section thirdPlace" >
+					<div class="gradient-public"></div>
+					<div class="chap-cover">
+						<h1 class="text-center white-text">Leisure</h1>
+						<div class="line-break"></div>
+						<h6 class="text-center white-text">Third Place</h6>
+					</div>
+					<img class="public-img1" data-src="images/airplane.png">
+					<img class="public-img2" data-src="images/skyline.png">
+				</div>
+				<div class="section thirdPlace1">
+					<div class="chap-cover-right">
+						<h2>Singaporeans<br>Love Travelling</h2>
+						<p><b>NO.1</b> Frequent traveller in Asia-Pacific Region.</p>
+						<p>Singaporean clocked an average of 1.44 Trip <span class="blinking">(which year?)</span> per citizen annually.</p>
+					</div>
+					<div class="curve-edge-type2 third-bg">
+						<video id="cover-video" loop muted data-autoplay>
+							<source src="images/flying.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="section thirdPlace2">
+						<div class="row">
+							<div class="col-6 my-auto pr-5">
+								<div class="chap-cover-left">
+									<h2>Wanderlust <br>to "Wonder-lost"</h2>
+									<p>Good things came to a halt when COVID-19 gave the world a tight slap in the face.</p> 
+									<p>Singaporeans stopped had to give up their favourite pastime of travelling, with the stark decline of leisure travellers to overseas destinations.</p>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="curve-edge-type5">
+									<div id="sg-traveller-chart"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section thirdPlace3">
+						<div class="chap-cover-right">
+							<h2>Rediscover Singapore</h2>
+							<p>Although Singaporeans are unable to visit overseas countries, leisure still continues within this little red dot.<p>
+								<p>Singapore Government has since initiated the  Rediscover Singapore project to boost "localised" tourism.</p>
+							</div>
+							<div class="image-wall-1">
+								<div class="image-wall-1-1 third-bg"></div>
+								<div class="image-wall-1-2 third-bg"></div>
+								<div class="image-wall-1-3 third-bg"></div>
+							</div>
+							<div class="image-wall-2">
+								<div class="image-wall-2-1 third-bg"></div>
+								<div class="image-wall-2-2 third-bg"></div>
+								<div class="image-wall-2-3 third-bg"></div>
+							</div>
+						</div>
+						<div class="section theNext">
+							<div class="row">
+								<div class="col-6 my-auto pr-5">
+									<div class="chap-cover-left">
+										<h2 class="blinking">SOS!<br>A Title Here</h2>
+										<p>The Singapore government is doing their best to make the best out of the three places.</p>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="row pb-4">
+										<div class="col-2">
+											<div class="bullet-icon first-bg">
+												<img src="images/home.svg">
+											</div>
+										</div>
+										<div class="col-10">
+											<h5>First Place</h5>
+											<p>Sources for mental health wellness <span class="blinking">need to balance text length</span></p>
+										</div>
+									</div>
+									<div class="row pb-4">
+										<div class="col-2">
+											<div class="bullet-icon second-bg">
+												<img src="images/briefcase.svg">
+											</div>
+										</div>
+										<div class="col-10">
+											<h5>Second Place</h5>
+											<p>Digging into reserves to ensure dignity and job security</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-2">
+											<div class="bullet-icon third-bg">
+												<img src="images/airplane.svg">
+											</div>
+										</div>
+										<div class="col-10">
+											<h5>Third Place</h5>
+											<p>Finding ways to rejuvenate the residents locally to satiate their wanderlust</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section theFooter">
+							<div class="curve-edge-type6 bg-animate"></div>
+							<div class="chap-cover">
+								<h1 class="text-center white-text">Stay Positive,<br>Test Negative</h1>
+								<p class="text-center white-text mt-3">Thank you for following us in this journey.</p>
+							</div>
+							<div class="footer-button">
+								<a class="round-button bg-dark" href="#homePage"><img src="images/refresh.svg"></a>
+							</div>
+						</div>
+					</div>
 
-	<script src="js/menu.js"></script>
-	<script src="js/subMenu-bg.js"></script>
-</body>
-</html>
+					<script src="js/menu.js"></script>
+					<script src="js/subMenu-bg.js"></script>
+					<script src="js/audio-control.js"></script>
+					<script src="js/sg-traveller-chart.js"></script>
+				</body>
+				</html>

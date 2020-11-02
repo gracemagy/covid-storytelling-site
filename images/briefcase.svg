@@ -7,50 +7,100 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   id="Capa_1"
-   enable-background="new 0 0 512 512"
-   height="512"
-   viewBox="0 0 512 512"
-   width="512"
-   version="1.1"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
    sodipodi:docname="briefcase.svg"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)">
-  <metadata
-     id="metadata840">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs838" />
-  <sodipodi:namedview
-     inkscape:document-rotation="0"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="764"
-     id="namedview836"
-     showgrid="false"
-     inkscape:zoom="1.171875"
-     inkscape:cx="290.98667"
-     inkscape:cy="268.8"
-     inkscape:window-x="0"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="Capa_1" />
-  <path
-     d="m456.834 96.399h-57.3v-41.233c0-30.418-24.748-55.166-55.167-55.166h-176.733c-30.419 0-55.167 24.748-55.167 55.166v41.233h-57.3c-30.419 0-55.167 24.748-55.167 55.167v136.566c0 8.284 6.716 15 15 15h1.067v153.7c0 30.419 24.747 55.167 55.166 55.167h369.533c30.419 0 55.167-24.748 55.167-55.167v-153.7h1.067c8.284 0 15-6.716 15-15v-136.566c0-30.419-24.748-55.167-55.166-55.167zm-314.367-41.233c0-13.876 11.29-25.166 25.167-25.166h176.733c13.877 0 25.167 11.29 25.167 25.166v41.233h-227.067zm-112.467 96.4c0-13.877 11.29-25.167 25.167-25.167h401.667c13.876 0 25.166 11.29 25.166 25.167v121.566h-178.866v-33.2c0-8.284-6.716-15-15-15h-64.267c-8.284 0-15 6.716-15 15v33.2h-178.867zm208.867 136.663c0-.033.005-.064.005-.097s-.005-.064-.005-.097v-33.104h34.267v66.4h-34.267zm227.067 168.604c0 13.877-11.29 25.167-25.167 25.167h-369.534c-13.876 0-25.166-11.29-25.166-25.167v-153.7h162.8v33.2c0 8.284 6.716 15 15 15h64.267c8.284 0 15-6.716 15-15v-33.2h162.8z"
-     id="path833"
-     style="fill:#ffffff;fill-opacity:1;stroke-width:15.11811024;stroke-miterlimit:4;stroke-dasharray:none;stroke:#ffffff;stroke-opacity:1;stroke-linejoin:round" />
+   xml:space="preserve"
+   style="enable-background:new 0 0 512 512;"
+   viewBox="0 0 512 512"
+   y="0px"
+   x="0px"
+   id="Capa_1"
+   version="1.1"><metadata
+   id="metadata2129"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs2127" /><sodipodi:namedview
+   inkscape:current-layer="Capa_1"
+   inkscape:window-maximized="0"
+   inkscape:window-y="23"
+   inkscape:window-x="0"
+   inkscape:cy="279.01322"
+   inkscape:cx="100.75773"
+   inkscape:zoom="0.60901177"
+   showgrid="false"
+   id="namedview2125"
+   inkscape:window-height="743"
+   inkscape:window-width="1158"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<g
+   style="fill:#ffffff;fill-opacity:1"
+   id="g2092">
+	<path
+   style="fill:#ffffff;fill-opacity:1"
+   id="path2086"
+   d="M480,112h-96V48c0-17.672-14.328-32-32-32H160c-17.672,0-32,14.328-32,32v64H32c-17.594,0-32,14.406-32,32v96h192   c0-17.672,14.327-32,32-32h64c17.673,0,32,14.328,32,32h192v-96C512,126.406,497.594,112,480,112z M192,112V80h128v32H192z" />
+	<path
+   style="fill:#ffffff;fill-opacity:1"
+   id="path2088"
+   d="M320,304c0,17.672-14.327,32-32,32h-64c-17.673,0-32-14.328-32-32v-32H0v192c0,17.594,14.406,32,32,32h448   c17.594,0,32-14.406,32-32V272H320V304z" />
+	<rect
+   style="fill:#ffffff;fill-opacity:1"
+   id="rect2090"
+   height="64"
+   width="64"
+   y="240"
+   x="224" />
+</g>
+<g
+   id="g2094">
+</g>
+<g
+   id="g2096">
+</g>
+<g
+   id="g2098">
+</g>
+<g
+   id="g2100">
+</g>
+<g
+   id="g2102">
+</g>
+<g
+   id="g2104">
+</g>
+<g
+   id="g2106">
+</g>
+<g
+   id="g2108">
+</g>
+<g
+   id="g2110">
+</g>
+<g
+   id="g2112">
+</g>
+<g
+   id="g2114">
+</g>
+<g
+   id="g2116">
+</g>
+<g
+   id="g2118">
+</g>
+<g
+   id="g2120">
+</g>
+<g
+   id="g2122">
+</g>
 </svg>
