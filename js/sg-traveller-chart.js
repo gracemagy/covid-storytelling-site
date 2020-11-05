@@ -52,6 +52,8 @@ d3.csv("data/Quarterly-figures-for-travel.csv", function(error, data) {
   x.domain(data.map(function(d) { return d.period; }));
   y.domain([0, d3.max(data, function(d) { return d.travellers; })]);
 
+  var formatComma = d3.format(",");
+
   // append the rectangles for the bar chart
   svg.selectAll(".bar")
       .data(data)
@@ -69,7 +71,7 @@ d3.csv("data/Quarterly-figures-for-travel.csv", function(error, data) {
           .style("left", d3.event.pageX - 50 + "px")
           .style("top", d3.event.pageY - 70 + "px")
           .style("display", "inline-block")
-          .html("Outbound" + "<br>" + "Travellers:"+ "<br>" +(d.travellers));
+          .html("Outbound" + "<br>" + "Travellers:"+ "<br>" +(formatComma(d.travellers)));
         })
         .on("mouseout", function(d){tooltip.style("display", "none");});
 
