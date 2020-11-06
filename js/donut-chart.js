@@ -172,8 +172,9 @@ $(function() {
             var eventObj = {
                 
                 'mousemove': function(d) {
-                    tooltip.style('top', (d3v3.event.layerY - 40) + 'px')
+                    tooltip.style('top', (d3v3.event.layerY + 8.327*window.innerHeight) + 'px')
 			             .style('left', (d3v3.event.layerX - 20) + 'px');
+                    console.log(d3v3.event.layerY + 9*window.innerHeight);
 		          },
                 
                 'mouseover': function(d, i, j) {

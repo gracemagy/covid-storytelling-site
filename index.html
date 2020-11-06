@@ -20,6 +20,7 @@
     <script src=js/d3v3.js charset="utf-8"></script>
 
 	<script>
+                
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors:['homePage','threePlaces','subMenu','firstPlace','firstPlace1','firstPlace2','secondPlace','secondPlace1','secondPlace2','secondPlace3','thirdPlace','thirdPlace1','thirdPlace2','thirdPlace3','theNext','theFooter'],
@@ -53,6 +54,40 @@
 			});
 		});
 	</script>
+    
+    <style>
+        #fullpage,.hamburger {
+            display:none;
+        }
+        
+        
+        @media (min-width: 992px) { 
+            #fullpage,.hamburger{
+                display:block;
+                }
+        }
+        
+        option{
+            background-color:#dedede;
+        }
+    
+    .tooltip {
+        background: #eee;
+        box-shadow: 0 0 5px #999999;
+        color: #333;
+        font-size: 12px;
+        left: 130px;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+/*        top: 95px;*/
+        width: 90px;
+        z-index: 10;
+        display: block;
+        opacity: 0;
+    }
+    
+    </style>
 </head>
 <body>
 	<header class="header">
@@ -84,7 +119,6 @@
 			</ul>
 		</nav>
 	</header>
-
 	<div id="fullpage">
 		<div class="section">
 			<video id="cover-video" loop muted data-autoplay>
@@ -432,6 +466,8 @@
 						</div>
 					</div>
 				</div>
+                <div id="plsResize" style="text-align:center; margin:auto; width:80%;   line-height: 100vh; height:100vh;"><h3 style="line-height: 1.5; display: inline-block; vertical-align: middle;">This storyboard is optimized for a window with a landscape aspect ratio and a minimum width. Please resize the window to continue.</h3></div>
+
 
 				<script src="js/menu.js"></script>
 				<script src="js/subMenu-bg.js"></script>
