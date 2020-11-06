@@ -8,6 +8,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  background: #fff;
 }
 
 .pace-inactive {
@@ -17,6 +18,7 @@
 .pace .pace-progress {
   position: fixed;
   z-index: 9999;
+  background: #fff;
   top: 50%;
   right: 50%;
 }
@@ -29,7 +31,7 @@
   content: attr(data-progress-text);
   font-family: 'Hind Siliguri', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 2em;
   line-height: 1;
   color: #222;
   top: 50%;
@@ -48,5 +50,6 @@
 
 .pace-done > :not(.pace) {
   opacity: 1;
+  background: #fff;
   transition: opacity 0.5s ease-in-out;
 }
