@@ -531,6 +531,8 @@ video::-webkit-media-controls {
   left:5%;
   right: 50%;
   transform: translateY(-50%);
+  min-width: 600px;
+  max-width: 640px;
 }
 
 .bg-home {
