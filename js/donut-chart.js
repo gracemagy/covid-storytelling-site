@@ -17,18 +17,20 @@ $(function() {
         
     function DonutCharts() {
         
-            var tooltip = d3.select("#donut-charts")
+            var tooltip = d3v3.select("#donut-charts")
 		.append('div')
 		.attr('class', 'tooltip');
 
     tooltip.append('div')
 		.attr('class', 'label');
 
-        var charts = d3.select('#donut-charts');
+        var charts = d3v3.select('#donut-charts');
 
         var chart_m,
             chart_r,
-            color = d3.scale.category20();
+            //color = d3v3.scale.category20();
+            color = d3v3.scale.ordinal()
+            .range(["#8CB3FB", "#4182FA", "#3467C7" , "#20407A"]);
 
         var getCatNames = function(dataset) {
             var catNames = new Array();
@@ -70,16 +72,16 @@ $(function() {
 
             var eventObj = {
                 'mouseover': function(d, i) {
-                    d3.select(this)
+                    d3v3.select(this)
                         .transition()
                         .attr("r", chart_r * 0.65);
                 },
 
                 'mouseout': function(d, i) {
-                    d3.select(this)
+                    d3v3.select(this)
                         .transition()
                         .duration(500)
-                        .ease('bounce')
+                        .ease('elastic')
                         .attr("r", chart_r * 0.6);
                 },
 
@@ -91,12 +93,12 @@ $(function() {
                 }
             }
 
-            var donuts = d3.selectAll('.donut');
+            var donuts = d3v3.selectAll('.donut');
 
             // The circle displaying total data.
             donuts.append("svg:circle")
                 .attr("r", chart_r * 0.6)
-                .style("fill", "#E7E7E7")
+                .style("fill", "#f6f6f6")
                 .on(eventObj)
                 .attr("onclick","defaultText()");
     
@@ -104,6 +106,7 @@ $(function() {
                     .attr('class', 'center-txt type')
                     .attr('y', chart_r * -0.16)
                     .attr('text-anchor', 'middle')
+                    .style('font-size', '1.5rem')
                     .style('font-weight', 'bold')
                     .text(function(d, i) {
                         return d.type;
@@ -116,11 +119,13 @@ $(function() {
                     .attr('class', 'center-txt percentage')
                     .attr('y', chart_r * 0.16)
                     .attr('text-anchor', 'middle')
-                    .style('fill', '#A2A2A2');
+                    .style('font-size', '1.5rem')
+                    .style('font-weight', 'bold')
+                    .style('fill', '#222');
         }
 
         var setCenterText = function(thisDonut) {
-            var sum = d3.sum(thisDonut.selectAll('.clicked').data(), function(d) {
+            var sum = d3v3.sum(thisDonut.selectAll('.clicked').data(), function(d) {
                 return d.data.val;
             });
 
@@ -150,8 +155,8 @@ $(function() {
                 case 0:
                     path.transition()
                         .duration(500)
-                        .ease('bounce')
-                        .attr('d', d3.svg.arc()
+                        .ease('elastic')
+                        .attr('d', d3v3.svg.arc()
                             .innerRadius(chart_r * 0.7)
                             .outerRadius(chart_r)
                         );
@@ -159,7 +164,7 @@ $(function() {
 
                 case 1:
                     path.transition()
-                        .attr('d', d3.svg.arc()
+                        .attr('d', d3v3.svg.arc()
                             .innerRadius(chart_r * 0.7)
                             .outerRadius(chart_r * 1.08)
                         );
@@ -172,12 +177,13 @@ $(function() {
             var eventObj = {
                 
                 'mousemove': function(d) {
-                    tooltip.style('top', (d3.event.layerY - 40) + 'px')
-			             .style('left', (d3.event.layerX - 20) + 'px');
+                    tooltip.style('top', (d3v3.event.layerY + 8.327*window.innerHeight) + 'px')
+			             .style('left', (d3v3.event.layerX - 20) + 'px');
+                    console.log(d3v3.event.layerY + 9*window.innerHeight);
 		          },
                 
                 'mouseover': function(d, i, j) {
-                    pathAnim(d3.select(this), 1);
+                    pathAnim(d3v3.select(this), 1);
                     
                     tooltip.select('.label').html(d.data.cat.toUpperCase()).style('color','black');
                     tooltip.style('display', 'block');
@@ -201,7 +207,7 @@ $(function() {
                     tooltip.style('display', 'none');
 			        tooltip.style('opacity',0);
                     
-                    var thisPath = d3.select(this);
+                    var thisPath = d3v3.select(this);
                     if (!thisPath.classed('clicked')) {
                         pathAnim(thisPath, 0);
                     }
@@ -231,7 +237,7 @@ $(function() {
                                     
 
                     
-                    var allPathClicked = d3.selectAll('.clicked');
+                    var allPathClicked = d3v3.selectAll('.clicked');
                     
                     if (allPathClicked[0].length>0){
 //                        console.log(allPathClicked[0].length);
@@ -241,7 +247,7 @@ $(function() {
                     };
 
 
-                    var thisPath = d3.select(this);
+                    var thisPath = d3v3.select(this);
                     var clicked = thisPath.classed('clicked');
                     
                     pathAnim(thisPath, ~~(!clicked));
@@ -252,16 +258,16 @@ $(function() {
                 }
             };
 
-            var pie = d3.layout.pie()
+            var pie = d3v3.layout.pie()
                             .sort(null)
                             .value(function(d) {
                                 return d.val;
                             });
 
-            var arc = d3.svg.arc()
+            var arc = d3v3.svg.arc()
                             .innerRadius(chart_r * 0.7)
                             .outerRadius(function() {
-                                return (d3.select(this).classed('clicked'))? chart_r * 1.08
+                                return (d3v3.select(this).classed('clicked'))? chart_r * 1.08
                                                                            : chart_r;
                             });
 
@@ -330,7 +336,7 @@ $(function() {
 
     function defaultText(){
         document.getElementById('budgetDesc').innerHTML=
-            "<h3>Covid-19 Relief Measures</h3><p>In less than four months since February 2020, the Singapore Government rolled out four fiscal packages to support workers and businesses here during the ongoing COVID-19 pandemic.</p><p>Through the Unity, Resilience, Solidarity and Fortitude Budgets, Singapore has put aside almost S$100 billion – or almost 20 per cent of its GDP – to counter the impact of the virus.</p><p>To make it easier for you, we have developed the following summaries so that you can find out more about these budgets, at a glance.</p>";
+            "<h3>Covid-19 <br>Relief Measures</h3><p>In less than four months since February 2020, the Singapore Government rolled out four fiscal packages to support workers and businesses here during the ongoing Covid-19 pandemic.</p><p>Through the Unity, Resilience, Solidarity and Fortitude Budgets, Singapore has put aside almost S$100 billion – or almost 20 per cent of its GDP – to counter the impact of the virus.</p><p>Select each segment on the donut chart to find out more about the budgets.</p>";
     };
 
     /*
@@ -342,9 +348,9 @@ $(function() {
         var cat = ['Unity', 'Resilience', 'Solidarity', 'Fortitude'];
         var amt = [6.4,48.4,5.1,33];
         var desc = [
-            '<h3>Unity Budget</h3><p>Delivered on 18 February 2020</p><p>The <a href="https://www.mti.gov.sg/COS-2020/Stabilisation-and-Support-Package" target="_blank">Stabilisation and Support Package</a> was rolled out, including S$4 billion set aside to help workers and companies weather near-term economic uncertainties due to COVID-19. The new package will include job and cash-flow support to help firms retain and retrain workers.</p>',
-            '<h3>Resilience Budget</h3><p>Delivered on 26 March 2020</p><p>A slew of measures were rolled out to support businesses, sectors most affected by COVID-19 – including aviation, tourism, food services and arts & cultural sector – and help workers stay employed. For instance, qualifying commercial properties badly affected by the virus outbreak, such as hotels and serviced apartments, will pay no property tax for 2020. Various financing schemes for companies such as the <a href="https://www.enterprisesg.gov.sg/financial-assistance/loans-and-insurance/loans-and-insurance/enterprise-financing-scheme/overview" target="_blank">Enterprise Financing Scheme</a> and the <a href="https://www.enterprisesg.gov.sg/financial-assistance/loans-and-insurance/loans-and-insurance/temporary-bridging-loan-programme/overview" target="_blank">Temporary Bridging Loan Programme</a>, will also be enhanced to ensure access to credit.</p>',
-            '<h3>Solidarity Budget</h3><p>Delivered on 6 April 2020</p><p>Another S$5.1 billion was earmarked to help cushion the impact of COVID-19 on Singapore. This also marked the first time the Singapore Government has released three budgets in less than two months. Additional measures, such as enhancing the <a href="https://www.singaporebudget.gov.sg/docs/default-source/budget_2020/download/pdf/resilience-budget-enhanced-jobs-support-scheme.pdf" target="_blank">Job Support Scheme</a> to subsidise wages and help companies keep their employees, and increasing rental waivers, were introduced.</p>',
+            '<h3>Unity Budget</h3><p>Delivered on 18 February 2020</p><p>The <a href="https://www.mti.gov.sg/COS-2020/Stabilisation-and-Support-Package" target="_blank">Stabilisation and Support Package</a> was rolled out, including S$4 billion set aside to help workers and companies weather near-term economic uncertainties due to Covid-19. The new package will include job and cash-flow support to help firms retain and retrain workers.</p>',
+            '<h3>Resilience Budget</h3><p>Delivered on 26 March 2020</p><p>A slew of measures were rolled out to support businesses, sectors most affected by Covid-19 – including aviation, tourism, food services and arts & cultural sector – and help workers stay employed. For instance, qualifying commercial properties badly affected by the virus outbreak, such as hotels and serviced apartments, will pay no property tax for 2020. Various financing schemes for companies such as the <a href="https://www.enterprisesg.gov.sg/financial-assistance/loans-and-insurance/loans-and-insurance/enterprise-financing-scheme/overview" target="_blank">Enterprise Financing Scheme</a> and the <a href="https://www.enterprisesg.gov.sg/financial-assistance/loans-and-insurance/loans-and-insurance/temporary-bridging-loan-programme/overview" target="_blank">Temporary Bridging Loan Programme</a>, will also be enhanced to ensure access to credit.</p>',
+            '<h3>Solidarity Budget</h3><p>Delivered on 6 April 2020</p><p>Another S$5.1 billion was earmarked to help cushion the impact of Covid-19 on Singapore. This also marked the first time the Singapore Government has released three budgets in less than two months. Additional measures, such as enhancing the <a href="https://www.singaporebudget.gov.sg/docs/default-source/budget_2020/download/pdf/resilience-budget-enhanced-jobs-support-scheme.pdf" target="_blank">Job Support Scheme</a> to subsidise wages and help companies keep their employees, and increasing rental waivers, were introduced.</p>',
             '<h3>Fortitude Budget</h3><p>Delivered on 26 May 2020</p><p>The central focus of this Budget, announced as Singapore prepares to open its economy after a “circuit breaker” period of almost two months, is jobs. The Government launched a new <a href="https://www.wsg.gov.sg/SGUnited.html" target="_blank">SGUnited Jobs and Skills Package</a> that will create more than 40,000 jobs in the public and private sectors, 25,000 traineeships and 30,000 skills training opportunities. Support for businesses were also strengthened on three fronts: cash flow, costs and credit.</p>'        
         ];
         

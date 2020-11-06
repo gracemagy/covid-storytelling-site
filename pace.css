@@ -29,7 +29,7 @@
   content: attr(data-progress-text);
   font-family: 'Hind Siliguri', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 2em;
   line-height: 1;
   color: #222;
   top: 50%;

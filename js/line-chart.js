@@ -6,7 +6,7 @@
         1585699200000,-13.3,-0.12,-0.14,0.226,\n\
         1593561600000,-7,0.12,-0.13,0.469,\n";  
     var lineDesc = 
-    "<h3>COVID-19 Impact to Jobs Significantly Muted when Compared with GDP</h3><p>When comparing the periods before and during the pandemic, the percentage changes in metrics relating to jobs are muted. The largest change relates to unemployment where Singapore saw an increase of <strong>0.47%</strong> compared with pre-pandemic times in the third quarter of 2019. This pales in comparison with the dip in GDP of <strong>-13.3%</strong> in the Q2 and <strong>-7.0%</strong> in Q3 this year.</p>";
+    "<h3>Covid-19 Impact to Jobs Significantly Muted when Compared with GDP</h3><p>When comparing the periods before and during the pandemic, the percentage changes in metrics relating to jobs are muted. The largest change relates to unemployment where Singapore saw an increase of <strong>0.47%</strong> compared with pre-pandemic times in the third quarter of 2019. This pales in comparison with the dip in GDP of <strong>-13.3%</strong> in the Q2 and <strong>-7.0%</strong> in Q3 this year.</p>";
       
     showGraph(myData);
     updateLineDesc(lineDesc);
@@ -29,7 +29,7 @@
                 1593561600000,-7,0.12,-0.13,0.469,\n";
               
             var lineDesc = 
-                "<h3>COVID-19 Impact to Jobs Significantly Muted when Compared with GDP</h3><p>When comparing the periods before and during the pandemic, the percentage changes in metrics relating to jobs are muted. The largest change relates to unemployment where Singapore saw an increase of <strong>0.47%</strong> compared with pre-pandemic times in the third quarter of 2019. This pales in comparison with the dip in GDP of <strong>-13.3%</strong> in the Q2 and <strong>-7.0%</strong> in Q3 this year.</p>";
+                "<h3>Covid-19 Impact to Jobs Significantly Muted when Compared with GDP</h3><p>When comparing the periods before and during the pandemic, the percentage changes in metrics relating to jobs are muted. The largest change relates to unemployment where Singapore saw an increase of <strong>0.47%</strong> compared with pre-pandemic times in the third quarter of 2019. This pales in comparison with the dip in GDP of <strong>-13.3%</strong> in the Q2 and <strong>-7.0%</strong> in Q3 this year.</p>";
               break;
               
           case "gdp":
