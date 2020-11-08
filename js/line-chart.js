@@ -82,7 +82,7 @@ function showGraph(myData) {
         top: 10,
         right: 95,
         bottom: 40,
-        left: 30
+        left: 35
       },
       width = elmnt.offsetWidth,
       height = width;
