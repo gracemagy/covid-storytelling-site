@@ -68,8 +68,8 @@ d3.csv("data/Quarterly-figures-for-travel.csv", function(error, data) {
         .on("mousemove", function(d){
           tooltip
           .attr("class", "bar-tooltip")
-          .style("left", d3.event.pageX - 50 + "px")
-          .style("top", d3.event.pageY - 70 + "px")
+          .style("left", d3.event.pageX + 5 + "px")
+          .style("top", d3.event.pageY - 80 + "px")
           .style("display", "inline-block")
           .html("Outbound" + "<br>" + "Travellers:"+ "<br>" +(formatComma(d.travellers)));
         })

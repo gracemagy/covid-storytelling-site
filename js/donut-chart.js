@@ -28,7 +28,9 @@ $(function() {
 
         var chart_m,
             chart_r,
-            color = d3v3.scale.category20();
+            //color = d3v3.scale.category20();
+            color = d3v3.scale.ordinal()
+            .range(["#8CB3FB", "#4182FA", "#3467C7" , "#20407A"]);
 
         var getCatNames = function(dataset) {
             var catNames = new Array();
@@ -79,7 +81,7 @@ $(function() {
                     d3v3.select(this)
                         .transition()
                         .duration(500)
-                        .ease('bounce')
+                        .ease('elastic')
                         .attr("r", chart_r * 0.6);
                 },
 
@@ -96,7 +98,7 @@ $(function() {
             // The circle displaying total data.
             donuts.append("svg:circle")
                 .attr("r", chart_r * 0.6)
-                .style("fill", "#E7E7E7")
+                .style("fill", "#f6f6f6")
                 .on(eventObj)
                 .attr("onclick","defaultText()");
     
@@ -104,6 +106,7 @@ $(function() {
                     .attr('class', 'center-txt type')
                     .attr('y', chart_r * -0.16)
                     .attr('text-anchor', 'middle')
+                    .style('font-size', '1.5rem')
                     .style('font-weight', 'bold')
                     .text(function(d, i) {
                         return d.type;
@@ -116,7 +119,9 @@ $(function() {
                     .attr('class', 'center-txt percentage')
                     .attr('y', chart_r * 0.16)
                     .attr('text-anchor', 'middle')
-                    .style('fill', '#A2A2A2');
+                    .style('font-size', '1.5rem')
+                    .style('font-weight', 'bold')
+                    .style('fill', '#222');
         }
 
         var setCenterText = function(thisDonut) {
@@ -150,7 +155,7 @@ $(function() {
                 case 0:
                     path.transition()
                         .duration(500)
-                        .ease('bounce')
+                        .ease('elastic')
                         .attr('d', d3v3.svg.arc()
                             .innerRadius(chart_r * 0.7)
                             .outerRadius(chart_r)
